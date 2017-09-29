@@ -1,9 +1,5 @@
 class Colour
 
- 	RED = colour.new(255, 0, 0)
- 	GREEN = colour.new(0, 255, 0)
- 	BLUE = colour.new(0, 0, 255)
-
  def initialize(red, green, blue)
  	@red = red
  	@green = green
@@ -11,11 +7,14 @@ class Colour
  end
 
  def to_hex
-      to_s(16)
+     "#"+ @red.to_s(16).rjust(2, '0') + @green.to_s(16).rjust(2, '0') + @blue.to_s(16).rjust(2, '0')
  end
 
 end
 
+
+orange = Colour.new(255, 87, 51)
+puts orange.to_hex
 
 
 
